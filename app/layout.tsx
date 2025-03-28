@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'MARS Solutions Group',
   description: 'Optimize Your Development Team with MARS Solutions Group',
   icons: {
-    icon: 'https://22527425.fs1.hubspotusercontent-na1.net/hubfs/22527425/MARS/MARS-1%20(1).png',
+    icon: '/images/mars-logo.webp',
   },
 }
 
@@ -16,9 +16,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen bg-white font-sans antialiased">
+        <main className="relative flex min-h-screen flex-col">
+          {children}
+        </main>
         <Toaster />
       </body>
     </html>
